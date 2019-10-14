@@ -1,0 +1,105 @@
+/* Variabls */
+
+:root {
+    --primary-text: #ffffff;
+    --secondary-text: #757575;
+	--dark-blue: #fccb2d;
+	--light-text: #dadad1;
+	--white: #ffffff;
+	--light-gray: #bdbdbd;
+}
+
+/* Resets */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/background-dungeon.jpg");
+    background-position: center;
+    background-position-y: 10%;
+	font-family: MedievalSharp, sans-serifs;
+	color: var(--primary-text);
+}
+
+/* Helper Classes */
+
+/* Layout/Flexbox */
+.flex {
+	display: flex;
+}
+
+.flex-center {
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-grow-1 {
+	flex-grow: 1;
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.chat-container{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Text Classes */
+.primary-text {
+	color: var(--primary-text);
+}
+
+.light-text {
+	color: var(--light-text);
+}
+
+.secondary-text {
+	color: var(--secondary-text);
+}
+
+.text-center {
+	text-align: center;
+}
+
+h1 {
+	font-size: 48px;
+	font-weight: 300;
+}
+
+/*Header*/
+header{
+    height: 150px;
+}
+header .container{
+    height: 100%;
+}
+
+/*FairyDustInput*/
