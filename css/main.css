@@ -1,0 +1,249 @@
+/* Variabls */
+
+:root {
+    --primary-text: #ffffff;
+    --secondary-text: #757575;
+	--dark-blue: #fccb2d;
+	--light-text: #dadad1;
+	--white: #ffffff;
+	--light-gray: #bdbdbd;
+}
+
+/* Resets */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/background-dungeon.jpg");
+	background-position: absolute;
+	font-family: MedievalSharp, sans-serifs;
+	color: var(--primary-text);
+}
+
+/* Helper Classes */
+
+/* Layout/Flexbox */
+.flex {
+	display: flex;
+}
+
+.flex-center {
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-grow-1 {
+	flex-grow: 1;
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.hidden {
+	display: none;
+}
+
+/* Text Classes */
+.primary-text {
+	color: var(--primary-text);
+}
+
+.light-text {
+	color: var(--light-text);
+}
+
+.secondary-text {
+	color: var(--secondary-text);
+}
+
+.text-center {
+	text-align: center;
+}
+
+h1 {
+	font-size: 48px;
+	font-weight: 300;
+}
+
+/*Header*/
+header{
+    height: 150px;
+}
+header .container{
+    height: 100%;
+}
+/*chat*/
+/* Chat */
+
+#chat {
+	background: white;
+	height: 100px;
+	margin: 25px 0;
+	padding: 25px 25px;
+	color: white;
+	overflow-y: scroll;
+}
+
+#messageForm {
+	margin-bottom: 25px;
+}
+
+.message {
+	background-color: var(--primary-blue);
+	padding: 20px;
+	width: 80%;
+	margin-bottom: 20px;
+}
+
+.message-right {
+	background: var(--light-blue);
+	color: var(--primary-text);
+	margin-left: 20%;
+}
+
+.message-right .message-date {
+	color: var(--primary-text);
+}
+
+.message-details {
+	margin-bottom: 5px;
+}
+
+.message-author {
+	font-weight: 800;
+}
+
+.message-date {
+	font-weight: 100;
+	font-size: 14px;
+}
+
+.message-content {
+	font-weight: 100;
+}
+
+/*InputDesign*/
+* { box-sizing:border-box; }
+
+/* form starting stylings ------------------------------- */
+.group 			  { 
+  position:relative; 
+  margin-top:40px;
+  margin-bottom:45px; 
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+  font-family: MedievalSharp, sans-serifs;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  font-family: MedievalSharp, sans-serifs;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-25px;
+  font-size:24px;
+  color:rgb(255, 255, 255);
+}
+
+/* Bar bottom ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:rgb(66, 76, 114); 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* Animations*/
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+/*Button Design*/
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+	border:none;
+    cursor:pointer;
+    overflow: hidden;
+	outline:none;
+	font-family: MedievalSharp, sans-serifs;
+	font-size:40px;
+	margin-left: 5px;
+	margin-top: 9%;
+	height:45px;
+	color: white;
+}
